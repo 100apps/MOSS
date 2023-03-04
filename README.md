@@ -18,8 +18,7 @@ Android.
 Support most search engines, including Google, Bing, Yahoo, DuckDuckGo, StartPage, Baidu, Kagi, Yandex, Naver, Brave,
 Searx, Ecosia, Neeva in total.
 
-See more in [Releases](./releases)
-and [Pre-release build](./actions/workflows/pre-release-build.yml)
+See more in [Releases](https://github.com/100apps/MOSS/releases)
 
 ## Notice
 
