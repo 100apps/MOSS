@@ -6,6 +6,7 @@ import ChatGPTFeedback from './ChatGPTFeedback'
 import {
   CheckIcon,
   ChevronDownIcon,
+  ChevronRightIcon,
   CopyIcon,
   LinkExternalIcon,
   XCircleIcon,
@@ -80,13 +81,20 @@ function TalkItem({ type, content, session, done }) {
             )}
             {!collapsed ? (
               <span title="Collapse" className="gpt-util-icon" onClick={() => setCollapsed(true)}>
-                <XCircleIcon size={14} />
+                <ChevronRightIcon size={14} />
               </span>
             ) : (
               <span title="Expand" className="gpt-util-icon" onClick={() => setCollapsed(false)}>
                 <ChevronDownIcon size={14} />
               </span>
             )}
+            <span
+              title="Close"
+              className="gpt-util-icon"
+              onClick={() => document.querySelector('.chat-gpt-container').remove()}
+            >
+              <XCircleIcon size={14} />
+            </span>
           </div>
         </div>
       )}
@@ -121,9 +129,7 @@ function Interact({ onSubmit, enabled }) {
         className="interact-input"
         type="text"
         placeholder={
-          enabled
-            ? 'Type your question here'
-            : 'Wait for the answer to finish and then continue here'
+          enabled ? 'Ask me anything...' : 'Wait for the answer to finish and then continue here'
         }
         value={value}
         onChange={(e) => setValue(e.target.value)}

@@ -95,3 +95,29 @@ Browser.runtime.onMessage.addListener(async (message) => {
     await sendMessageFeedback(token, message.data)
   }
 })
+
+chrome.contextMenus.create({
+  id: "p1",
+  title: "ChatGPT",
+  contexts: ["selection"]
+});
+
+["直接输入", "prompt 生成", "内容提炼", "文本分类", "批判性分析", "文字润色"].forEach(m => {
+  chrome.contextMenus.create({
+    id: m,
+    parentId: 'p1',
+    title: m,
+    contexts: ["selection"]
+  });
+});
+chrome.contextMenus.onClicked.addListener(function (info, tab) {
+  chrome.tabs.query({
+    "active": true,
+    "currentWindow": true
+  }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, {
+      "info": info,
+      "tab": tab
+    });
+  });
+});

@@ -77,3 +77,37 @@ async function run() {
 }
 
 run()
+
+function getPrompt(command, selectionText) {
+  switch (command) {
+    case 'prompt 生成':
+      return 'generate 10 prompts about ' + selectionText + ' that I can type info ChatGPT'
+    case '内容提炼':
+      return 'summarize the following text: ' + selectionText
+    case '文本分类':
+      return 'classification the following text: ' + selectionText
+    case '文字润色':
+      return 'improve the following text: ' + selectionText
+    case '批判性分析':
+      return '请用批判性思维评价以下观点: ' + selectionText
+    default:
+      return selectionText
+  }
+}
+chrome.runtime.onMessage.addListener((request) => {
+  const command = request.info.menuItemId
+  const selectionText = request.info.selectionText
+
+  const question = getPrompt(command, selectionText)
+
+  const container = document.createElement('div')
+  container.className = 'chat-gpt-container'
+  container.id = 'chat-gpt-container-id'
+  const selectionRect = window.getSelection().getRangeAt(0).getBoundingClientRect()
+  container.style.left = selectionRect.x + 'px'
+  container.style.top = selectionRect.y + 'px'
+
+  document.body.prepend(container)
+
+  render(<ChatGPTCard question={question} container={container} />, container)
+})

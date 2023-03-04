@@ -5,9 +5,10 @@ import { fetchSSE } from './fetch-sse.mjs'
 import { isEmpty } from 'lodash-es'
 import { getChatPairs } from '../utils.mjs'
 
-const chatgptPromptBase =
-  `You are a helpful, creative, clever, and very friendly assistant.` +
-  `When you receive a question, you will analyse the language used(usually english) and reply in the same language.`
+const chatgptPromptBase = '';
+
+// `You are a helpful, creative, clever, and very friendly assistant.` +
+// `When you receive a question, you will analyse the language used(usually english) and reply in the same language.`
 
 const gptPromptBase =
   `The following is a conversation with an AI assistant.` +
@@ -51,7 +52,7 @@ export async function generateAnswersWithGptCompletionApi(
       prompt: prompt,
       model: Models[modelName].value,
       stream: true,
-      max_tokens: 1000,
+      // max_tokens: 1000,
     }),
     onMessage(message) {
       console.debug('sse message', message)
@@ -71,8 +72,8 @@ export async function generateAnswersWithGptCompletionApi(
       answer += data.choices[0].text
       port.postMessage({ answer: answer, done: false, session: null })
     },
-    async onStart() {},
-    async onEnd() {},
+    async onStart() { },
+    async onEnd() { },
     async onError(resp) {
       if (resp.status === 403) {
         throw new Error('CLOUDFLARE')
@@ -115,7 +116,7 @@ export async function generateAnswersWithChatgptApi(port, question, session, api
       messages: prompt,
       model: Models[modelName].value,
       stream: true,
-      max_tokens: 1000,
+      // max_tokens: 1000,
     }),
     onMessage(message) {
       console.debug('sse message', message)
@@ -135,8 +136,8 @@ export async function generateAnswersWithChatgptApi(port, question, session, api
       if ('content' in data.choices[0].delta) answer += data.choices[0].delta.content
       port.postMessage({ answer: answer, done: false, session: null })
     },
-    async onStart() {},
-    async onEnd() {},
+    async onStart() { },
+    async onEnd() { },
     async onError(resp) {
       if (resp.status === 403) {
         throw new Error('CLOUDFLARE')
