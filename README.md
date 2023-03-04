@@ -1,13 +1,14 @@
 # MOSS: ChatGPT for Browsers
 
+[![Verify search engine configs](https://github.com/josStorer/chatGPT-search-engine-extension/workflows/verify-configs/badge.svg)](https://github.com/josStorer/chatGPT-search-engine-extension/actions/workflows/verify-configs.yml)
+[![GitHub release](https://img.shields.io/github/release/josStorer/chatGPT-search-engine-extension.svg)](https://github.com/josStorer/chatGPT-search-engine-extension/releases/latest)
+
 |  1. Search engine assistant | 2. Right click on any page |
 | ------------- | ------------- |
 | ![](screenshot/google.jpg)  | ![](screenshot/zhihu.jpg)   |
 | ![](screenshot/baidu.jpg)  |![](screenshot/zhihu2.jpg)   |
 
 
-[![Verify search engine configs](https://github.com/josStorer/chatGPT-search-engine-extension/workflows/verify-configs/badge.svg)](https://github.com/josStorer/chatGPT-search-engine-extension/actions/workflows/verify-configs.yml)
-[![GitHub release](https://img.shields.io/github/release/josStorer/chatGPT-search-engine-extension.svg)](https://github.com/josStorer/chatGPT-search-engine-extension/releases/latest)
 
 [Installation](#installation)
 
@@ -17,10 +18,8 @@ Android.
 Support most search engines, including Google, Bing, Yahoo, DuckDuckGo, StartPage, Baidu, Kagi, Yandex, Naver, Brave,
 Searx, Ecosia, Neeva in total.
 
-Request more search engine support in [#6](https://github.com/josStorer/chatGPT-search-engine-extension/issues/6)
-
-See more in [Releases](https://github.com/josStorer/chatGPT-search-engine-extension/releases)
-and [Pre-release build](https://github.com/josStorer/chatGPT-search-engine-extension/actions/workflows/pre-release-build.yml)
+See more in [Releases](./releases)
+and [Pre-release build](./actions/workflows/pre-release-build.yml)
 
 ## Notice
 
