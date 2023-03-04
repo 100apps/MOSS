@@ -1,5 +1,5 @@
 {
-  "name": "chat-gpt-search-engine-extension",
+  "name": "moss",
   "scripts": {
     "build": "node build.mjs --production",
     "build:safari": "bash ./safari/build.sh",

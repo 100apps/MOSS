@@ -1,6 +1,6 @@
 {
-  "name": "ChatGPT for Search Engine",
-  "description": "Display ChatGPT response alongside Search Engine results",
+  "name": "MOSS: ChatGPT web browser extension",
+  "description": "ChatGPT web browser extension",
   "version": "1.25.1",
   "manifest_version": 3,
   "icons": {

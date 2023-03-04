@@ -4,6 +4,7 @@
   @media screen and (prefers-color-scheme: dark) {
     @import 'highlight.js/scss/github-dark.scss';
     --font-color: #c9d1d9;
+    color: #c9d1d9;
     --theme-color: #202124;
     --theme-border-color: #3c4043;
   }
@@ -11,6 +12,7 @@
   @media screen and (prefers-color-scheme: light) {
     @import 'highlight.js/scss/github.scss';
     --font-color: #24292f;
+    color: #24292f;
     --theme-color: #eaecf0;
     --theme-border-color: #aeafb2;
   }

@@ -81,13 +81,13 @@ run()
 function getPrompt(command, selectionText) {
   switch (command) {
     case 'prompt 生成':
-      return 'generate 10 prompts about ' + selectionText + ' that I can type info ChatGPT'
+      return '生成 10 条关于' + selectionText + '的 prompts，可以给 ChatGPT 作为输入'
     case '内容提炼':
-      return 'summarize the following text: ' + selectionText
+      return '对一下内容进行总结: ' + selectionText
     case '文本分类':
-      return 'classification the following text: ' + selectionText
+      return '请对以下文本进行分类，并给出分类原因: ' + selectionText
     case '文字润色':
-      return 'improve the following text: ' + selectionText
+      return '对一下文字进行润色: ' + selectionText
     case '批判性分析':
       return '请用批判性思维评价以下观点: ' + selectionText
     default:
