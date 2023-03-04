@@ -1,9 +1,9 @@
 # MOSS: ChatGPT for Browsers
 
-|  Search engine assistant |Right click on any page |
+|  1. Search engine assistant | 2. Right click on any page |
 | ------------- | ------------- |
-| ![](blob/main/screenshot/google.jpg)  | ![](blob/main/screenshot/zhihu.jpg)   |
-| ![](blob/main/screenshot/baidu.jpg)  |![](blob/main/screenshot/zhihu2.jpg)   |
+| ![](screenshot/google.jpg)  | ![](screenshot/zhihu.jpg)   |
+| ![](screenshot/baidu.jpg)  |![](screenshot/zhihu2.jpg)   |
 
 
 [![Verify search engine configs](https://github.com/josStorer/chatGPT-search-engine-extension/workflows/verify-configs/badge.svg)](https://github.com/josStorer/chatGPT-search-engine-extension/actions/workflows/verify-configs.yml)
