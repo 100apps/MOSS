@@ -3,7 +3,7 @@
 [![Verify search engine configs](https://github.com/josStorer/chatGPT-search-engine-extension/workflows/verify-configs/badge.svg)](https://github.com/josStorer/chatGPT-search-engine-extension/actions/workflows/verify-configs.yml)
 [![GitHub release](https://img.shields.io/github/release/josStorer/chatGPT-search-engine-extension.svg)](https://github.com/josStorer/chatGPT-search-engine-extension/releases/latest)
 
-|  1. Search engine assistant | 2. Right click on any page |
+|  feature #1. Search engine assistant | feature #2. Right click on any page |
 | ------------- | ------------- |
 | ![](screenshot/google.jpg)  | ![](screenshot/zhihu.jpg)   |
 | ![](screenshot/baidu.jpg)  |![](screenshot/zhihu2.jpg)   |
